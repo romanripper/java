@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="my_pu">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/mas_final_project?useSSL=false&amp;serverTimezone=UTC" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="root" />
+				
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+				
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			
+			<property name="hibernate.cache.use_second_level_cache"
+				value="false"></property>
+			<property name="hibernate.cache.use_query_cache"
+				value="false"></property>
+			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"></property>  
+			
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.temp.use_jdbc_metadata_defaults"
+				value="false" />
+		</properties>
+	</persistence-unit>
+
+<!-- 
+	<persistence-unit name="associations_composition_pu">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>associations.composition.Comment</class>
+		<class>associations.composition.Video</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/mas_mini_project05?useSSL=false&amp;serverTimezone=UTC" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="root" />
+
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.temp.use_jdbc_metadata_defaults"
+				value="false" />
+		</properties>
+	</persistence-unit>
+	 -->
+	
+</persistence>
