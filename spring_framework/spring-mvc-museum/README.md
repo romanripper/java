@@ -1,4 +1,10 @@
-## To run project:
+### Decription:
+
+- spring-mvc
+- hibernate
+- MySQL
+
+### To run project:
 
 - Import as maven project
 - Create schema in MySQL
